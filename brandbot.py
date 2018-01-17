@@ -1,3 +1,4 @@
+import os
 import requests
 import telegram
 import xml.etree.ElementTree as ET
@@ -6,7 +7,7 @@ from telegram.ext import Filters, CommandHandler, Updater
 from random import randint
 from string import Template
 
-updater = Updater(token='502007891:AAHHvj0UJr6GEk1TInHtC_867qaDQhtw6Ps')
+updater = Updater(token=os.environ['TELEGRAM_TOKEN'])
 dispatcher = updater.dispatcher
 
 def webcam(bot, update):
